@@ -4,6 +4,9 @@
  
  {{-- <h5 class="card-title">Todo List</h5> --}}
 
+     {{-- <input type="text" name="todo_item" placeholder="Add an item">
+     <a href="#" class="btn btn-primary">Add</a> --}}
+
      @foreach ($tasks as $task)
 
        <li>  {{$task->name}}    

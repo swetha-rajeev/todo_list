@@ -21,24 +21,39 @@
             display:flex;
              align-items:center;
             }
-
+            input[type=text]{
+                width:80%;
+            }
         </style>
 
     </head>
     <body>
-        
+            
             <div class="container text-muted mx-auto">
                 <div class = "card w-80 border-light">
+                    <form method ="post" action ="/">
+                        {{ csrf_field() }}
                     <div class="card-header text-center">
                         Todo List
+                        
                     </div>
+                    <div class="card-header">
+                     <input type="text" name="todo_item" placeholder="Add an item">
+                     <button type="submit">Add</button>
+                     <!-- <a href="#" class="btn btn-primary">Add</a> -->
+
+                    </div>
+                    </form>
+
                     <div class="card-body">
-                   
+                    <form method="delete" action " ">
+
                    @yield('todologic')
+                    </form>
           </div>
         </div>
     </div>
-
+    </form>
         <!-- Bootstrap Javascript -->
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -12,6 +12,10 @@
 */
 
 Route::get('/','TasksController@home');
+Route::post('/','TasksController@store');
+Route::delete('/','TasksController@delete');
+
+
 
 
 // Route::get('/', function () {

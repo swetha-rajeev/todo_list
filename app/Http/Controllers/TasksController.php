@@ -27,6 +27,7 @@ class TasksController extends Controller
 
          return redirect('/'); //default get request.
 
+
     } 
     public function delete(){
 
