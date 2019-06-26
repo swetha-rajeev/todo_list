@@ -9,14 +9,19 @@
 
      @foreach ($tasks as $task)
 
-       <li>  {{$task->name}}    
+       <form method="post" action ="/{{ $task->id }}">
+           {{ method_field('DELETE') }} 
+           {{csrf_field()}}
 
-       <button type="button" class="close" aria-label="Close">
+       <li>  {{$task->name}}    
+       
+        <button type="submit" class="close" aria-label="Close">
             <span aria-hidden="true">&times;</span>
        </button>
-
-
+       
        </li>
+
+       </form>
 
 
     @endforeach

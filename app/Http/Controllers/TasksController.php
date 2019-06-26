@@ -9,7 +9,7 @@ use App\Task;
 
 class TasksController extends Controller
 {
-    public function home()
+    public function index()
     {
         $tasks = \App\Task::all();
         
@@ -29,10 +29,12 @@ class TasksController extends Controller
 
 
     } 
-    public function delete(){
+    public function destroy($taskid){
 
       //delete task
+           
+         \App\Task::findOrFail($taskid)->delete();
+          return redirect('/');
 
-
-    }
+        }
 }

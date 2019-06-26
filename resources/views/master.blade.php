@@ -46,10 +46,11 @@
                     </form>
 
                     <div class="card-body">
-                    <form method="delete" action " ">
-
+                    {{-- <form method="post" action ="/task/{{ $task->id }}">
+                      {{csrf_field()}}
+ --}}
                    @yield('todologic')
-                    </form>
+                    {{-- </form> --}}
           </div>
         </div>
     </div>
